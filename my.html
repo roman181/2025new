@@ -1,0 +1,265 @@
+l<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Kostenlose Social Tools – Menü (Zefoy, Leofame, Quelle)</title>
+  <style>
+    :root{
+      --bg:#0f1320; --card:#141a2a; --muted:#a9b0c2; --text:#e8ecf7;
+      --pri:#6c7bff; --pri2:#8f5aff; --ok:#27ae60; --warn:#f39c12; --err:#e74c3c;
+      --ig1:#f09433; --ig2:#dc2743; --ig3:#cc2366; --ig4:#bc1888;
+      --tt1:#ff0050; --tt2:#00f2ea;
+      --yt:#ff0000;
+    }
+    *{box-sizing:border-box}
+    body{margin:0;background:radial-gradient(1200px 800px at 20% -20%, rgba(140,120,255,.25), transparent),
+                  radial-gradient(1400px 1000px at 120% 0%, rgba(0,242,234,.12), transparent),
+                  var(--bg);
+         color:var(--text); font-family:system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,Arial,sans-serif}
+    header{padding:32px 20px 10px; text-align:center}
+    h1{margin:0 0 8px; font-size:28px; letter-spacing:.2px}
+    .sub{color:var(--muted); font-size:15px}
+    nav{display:flex; gap:12px; justify-content:center; padding:16px; flex-wrap:wrap}
+    .tab{background:#1a2236; color:var(--text); border:1px solid #263150; padding:10px 14px;
+         border-radius:10px; cursor:pointer; font-weight:600; transition:.2s}
+    .tab.active,.tab:hover{border-color:var(--pri); box-shadow:0 0 0 3px rgba(108,123,255,.15)}
+    .wrap{max-width:1100px; margin:0 auto; padding:10px 16px 40px}
+    .grid{display:grid; grid-template-columns:repeat(auto-fit,minmax(300px,1fr)); gap:16px}
+    .card{background:linear-gradient(180deg, rgba(255,255,255,.03), transparent 60%), var(--card);
+          border:1px solid #1f2944; border-radius:16px; padding:18px; position:relative; overflow:hidden}
+    .badge{position:absolute; top:12px; right:12px; font-size:11px; padding:4px 8px; border-radius:999px; font-weight:700}
+    .free{background:rgba(39,174,96,.15); color:#b8f4d0; border:1px solid rgba(39,174,96,.35)}
+    .warn{background:rgba(243,156,18,.15); color:#ffe1b4; border:1px solid rgba(243,156,18,.35)}
+    h3{margin:0 0 6px; font-size:18px}
+    .brand{display:inline-flex; align-items:center; gap:10px; margin-bottom:6px}
+    .pill{font-size:11px; color:var(--muted); border:1px dashed #39476f; padding:2px 8px; border-radius:999px}
+    p{color:var(--muted); margin:8px 0 14px; font-size:14px; line-height:1.5}
+    .features{margin:0 0 14px; padding:0; list-style:none; color:var(--muted); font-size:14px}
+    .features li{margin:6px 0; display:flex; gap:8px}
+    .features li::before{content:"✓"; color:var(--ok); font-weight:900}
+    label{display:block; font-size:12px; color:#cdd5ea; margin:10px 0 6px}
+    input,select{width:100%; background:#0f1424; border:1px solid #283458; color:var(--text);
+                 padding:11px 12px; border-radius:10px; outline:none; transition:.2s}
+    input:focus,select:focus{border-color:var(--pri); box-shadow:0 0 0 3px rgba(108,123,255,.15)}
+    .row{display:flex; gap:10px}
+    .row > *{flex:1}
+    .cta{margin-top:14px; width:100%; padding:11px 14px; border:0; border-radius:10px; color:white; font-weight:800; cursor:pointer; transition:.2s}
+    .cta:disabled{opacity:.6; cursor:not-allowed}
+    .cta-ig{background:linear-gradient(90deg,var(--ig1),var(--ig2),var(--ig3),var(--ig4))}
+    .cta-tt{background:linear-gradient(90deg,var(--tt1),var(--tt2))}
+    .cta-yt{background:linear-gradient(90deg,#ff3b3b,var(--yt))}
+    .cta-neo{background:linear-gradient(90deg,var(--pri),var(--pri2))}
+    .note{font-size:12px; color:#9fb0d8; margin-top:8px}
+    .divider{height:1px; background:#243157; margin:14px -18px}
+    footer{max-width:1100px; margin:24px auto 60px; color:#9fb0d8; text-align:center; font-size:12px}
+    .hide{display:none}
+    .risk{color:#ffd7a2}
+    .ext{font-size:12px; color:#a9b0c2}
+    .ext a{color:#c7d2ff; text-decoration:none; border-bottom:1px dotted #5e6cff}
+    .ext a:hover{color:#ffffff}
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Menü – Kostenlose Quelle benutzen</h1>
+    <div class="sub">Zefoy • Leofame • Eigene Quelle</div>
+  </header>
+
+  <nav>
+    <button class="tab active" data-target="#quelle">Eigene Quelle</button>
+    <button class="tab" data-target="#zefoy">Zefoy</button>
+    <button class="tab" data-target="#leofame">Leofame</button>
+  </nav>
+
+  <div class="wrap">
+    <!-- Eigene Quelle -->
+    <section id="quelle" class="section">
+      <div class="grid">
+        <div class="card">
+          <span class="badge free">KOSTENLOS</span>
+          <div class="brand">
+            <h3>Eigene Quelle verwenden</h3>
+            <span class="pill">share.google</span>
+          </div>
+          <p>Verarbeite Eingaben über deine bereitgestellte Quelle. Trage Ziel-Links oder Benutzernamen ein und starte die Anfrage.</p>
+
+          <ul class="features">
+            <li>Kein Passwort erforderlich</li>
+            <li>Sofortige Validierung im Browser</li>
+            <li>Platzhalter-Request – an Backend anpassbar</li>
+          </ul>
+
+          <div class="row">
+            <div>
+              <label for="q-service">Service</label>
+              <select id="q-service">
+                <option value="instagram-views">Instagram Views</option>
+                <option value="instagram-likes">Instagram Likes</option>
+                <option value="tiktok-views">TikTok Views</option>
+                <option value="tiktok-likes">TikTok Likes</option>
+                <option value="youtube-likes">YouTube Likes</option>
+              </select>
+            </div>
+            <div>
+              <label for="q-handle">Benutzername oder Link</label>
+              <input id="q-handle" placeholder="@name oder https://..." />
+            </div>
+          </div>
+
+          <button class="cta cta-neo" id="q-send">Anfrage an Quelle senden</button>
+          <div class="note ext">Quelle-Links: 
+            <br>• Allgemein: <em>https://share.google/F2Rp6WWy1ZjqLuCw5</em>
+            <br>• Zefoy-Weitergabe: <em>https://share.google/x0yQe9hDJYhF97gQT</em>
+          </div>
+          <div class="divider"></div>
+          <p class="note">Hinweis: Dieser Button führt keinen direkten Remote-Call aus. Bitte im JS unten Endpunkte/Weiterleitungen anpassen.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Zefoy -->
+    <section id="zefoy" class="section hide">
+      <div class="grid">
+        <div class="card">
+          <span class="badge free">KOSTENLOS</span>
+          <div class="brand">
+            <h3>Zefoy – TikTok Booster</h3>
+            <span class="pill">Views • Likes • Follower</span>
+          </div>
+          <p>Zefoy bietet kostenlose Tools für TikTok-Engagement. Häufig sind Captchas und Limits aktiv. Ergebnisse variieren.</p>
+
+          <ul class="features">
+            <li>TikTok Video-URL einreichen</li>
+            <li>Views/Likes ggf. zeitlich limitiert</li>
+            <li>Kein Login – aber Captchas möglich</li>
+          </ul>
+
+          <label for="zf-url">TikTok Video-URL</label>
+          <input id="zf-url" placeholder="https://www.tiktok.com/@user/video/..." />
+          <button class="cta cta-tt" id="zf-go">Kostenlose Zefoy-Anfrage</button>
+
+          <p class="note risk">Beachte: Tools wie Zefoy können gegen Plattformrichtlinien verstoßen. Nutzung auf eigenes Risiko.</p>
+          <div class="divider"></div>
+          <p class="ext">Offizielle App/Infos sind mobil verfügbar. Diese Seite triggert keine Zefoy-Calls automatisch – nutze ggf. Weiterleitung.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Leofame -->
+    <section id="leofame" class="section hide">
+      <div class="grid">
+        <div class="card">
+          <span class="badge free">KOSTENLOS</span>
+          <div class="brand">
+            <h3>Leofame – Kostenlose Tests</h3>
+            <span class="pill">Instagram • TikTok • YouTube</span>
+          </div>
+          <p>Leofame bietet kostenlose Testversionen (Views, Likes, Follower). Meist nur Link/Benutzername nötig, kein Passwort.</p>
+
+          <ul class="features">
+            <li>Instagram: Views, Likes, Follower, Story Views</li>
+            <li>TikTok: Views, Likes, Follower</li>
+            <li>YouTube: kostenlose Likes</li>
+          </ul>
+
+          <div class="row">
+            <div>
+              <label for="lf-service">Service</label>
+              <select id="lf-service">
+                <option value="ig-views">Instagram Views</option>
+                <option value="ig-likes">Instagram Likes</option>
+                <option value="ig-followers">Instagram Follower</option>
+                <option value="ig-story">Instagram Story Views</option>
+                <option value="tt-views">TikTok Views</option>
+                <option value="tt-likes">TikTok Likes</option>
+                <option value="tt-followers">TikTok Follower</option>
+                <option value="yt-likes">YouTube Likes</option>
+              </select>
+            </div>
+            <div>
+              <label for="lf-input">Benutzername oder Post-Link</label>
+              <input id="lf-input" placeholder="@name oder https://..." />
+            </div>
+          </div>
+
+          <button class="cta cta-ig" id="lf-go">Kostenlosen Leofame-Test nutzen</button>
+          <div class="divider"></div>
+          <p class="ext">Leofame Startseite: leofame.com/de – Kostenlose Bereiche sind dort verlinkt. Diese Seite leitet nur weiter/erfasst Eingaben.</p>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <footer>
+    <div>Kein Passwort • Keine Umfragen • Clientseitige Validierung • Weiterleitung/Backend anpassbar</div>
+    <div class="note">Compliance-Hinweis: Beachte stets die Nutzungsbedingungen der jeweiligen Plattformen.</div>
+  </footer>
+
+  <script>
+    // Tabs
+    document.querySelectorAll('.tab').forEach(btn=>{
+      btn.addEventListener('click',()=>{
+        document.querySelectorAll('.tab').forEach(b=>b.classList.remove('active'));
+        btn.classList.add('active');
+        const tgt = btn.getAttribute('data-target');
+        document.querySelectorAll('.section').forEach(s=>s.classList.add('hide'));
+        document.querySelector(tgt).classList.remove('hide');
+      });
+    });
+
+    // Helper: Fake async
+    const wait = ms => new Promise(r=>setTimeout(r,ms));
+    const busyBtn = async (btn, run) => {
+      const t = btn.textContent;
+      btn.disabled = true;
+      btn.textContent = 'Wird verarbeitet...';
+      try { await run(); btn.textContent = '✓ Erfolgreich'; btn.style.filter='saturate(1.2)'; }
+      catch(e){ btn.textContent='Fehlgeschlagen'; btn.style.background='#e74c3c'; alert(e?.message||'Fehler'); }
+      finally { await wait(1600); btn.disabled = false; btn.textContent = t; btn.style.background=''; btn.style.filter=''; }
+    };
+
+    // Eigene Quelle – Platzhalter-Flow
+    document.getElementById('q-send').addEventListener('click', async (e)=>{
+      const btn = e.currentTarget;
+      const service = document.getElementById('q-service').value;
+      const handle = document.getElementById('q-handle').value.trim();
+      if(!handle){ alert('Bitte Benutzernamen oder Link eingeben.'); return; }
+      await busyBtn(btn, async ()=>{
+        // TODO: Hier echten Request/Weiterleitung implementieren:
+        // z.B. fetch('/api/share-proxy', {method:'POST', headers:{'Content-Type':'application/json'}, body: JSON.stringify({ service, handle, source:'https://share.google/F2Rp6WWy1ZjqLuCw5' })})
+        await wait(900);
+        console.log('Quelle:', {service, handle});
+      });
+    });
+
+    // Zefoy – sicher nur als Weiterleitung/Info
+    document.getElementById('zf-go').addEventListener('click', async (e)=>{
+      const btn = e.currentTarget;
+      const url = document.getElementById('zf-url').value.trim();
+      if(!url){ alert('Bitte TikTok Video-URL eingeben.'); return; }
+      await busyBtn(btn, async ()=>{
+        // Empfohlen: Weiterleitung zur eigenen Proxy-Seite oder Info-Seite, nicht direkt automatisieren (Captcha etc.)
+        // window.open('https://share.google/x0yQe9hDJYhF97gQT', '_blank');
+        await wait(900);
+        console.log('Zefoy URL:', url);
+      });
+    });
+
+    // Leofame – Platzhalter-Flow
+    document.getElementById('lf-go').addEventListener('click', async (e)=>{
+      const btn = e.currentTarget;
+      const svc = document.getElementById('lf-service').value;
+      const input = document.getElementById('lf-input').value.trim();
+      if(!input){ alert('Bitte Benutzernamen oder Link eingeben.'); return; }
+      await busyBtn(btn, async ()=>{
+        // TODO: Hier echten Request/Weiterleitung implementieren:
+        // window.open('https://leofame.com/de', '_blank');
+        // oder fetch('/api/leofame-proxy', {...})
+        await wait(900);
+        console.log('Leofame:', {svc, input});
+      });
+    });
+  </script>
+</body>
+</html>
